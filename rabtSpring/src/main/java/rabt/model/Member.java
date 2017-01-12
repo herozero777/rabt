@@ -1,4 +1,4 @@
-package AP.rabtSpring.domain;
+package rabt.model;
 
 import java.io.Serializable;
 

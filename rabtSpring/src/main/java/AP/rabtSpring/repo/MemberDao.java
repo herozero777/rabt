@@ -2,7 +2,7 @@ package AP.rabtSpring.repo;
 
 import java.util.List;
 
-import AP.rabtSpring.domain.Member;
+import rabt.model.Member;
 
 public interface MemberDao
 {

@@ -3,8 +3,7 @@ package AP.rabtSpring.test;
 import java.util.List;
 
 import junit.framework.Assert;
-
-import AP.rabtSpring.domain.Member;
+import rabt.model.Member;
 import AP.rabtSpring.repo.MemberDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
