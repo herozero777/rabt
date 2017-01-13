@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	 <class name="rabt.model.Profile" table="Profile">
+        <id name="u_id" type="int">
+            <column name="u_id"/>
+            <generator class="assigned" />
+        </id>
+        <property name="gender" type="string">
+            <column name="gender" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="school" type="string">
+            <column name="school" length="45" />
+        </property>
+        <property name="aboutme" type="string">
+            <column name="aboutme" length="45" />
+        </property>
+        <set name="tags" table="profile_has_tags" lazy="true" fetch="select"
+        	inverse="false" cascade="all">
+            <key>
+                <column name="id" not-null="true" />
+            </key>
+            <many-to-many entity-name="rabt.model.Tags">
+                <column name="id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
